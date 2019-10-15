@@ -22,7 +22,9 @@ switch ($eventName) {
                     'res_id' => $modx->resource->id,
                     'content_key' => $tag
                 ]);
-                if (!$find) {continue;}
+                if (!$find) {
+                    continue;
+                }
                 $output = str_replace("[$tag]", $find->get('key_text'), $output);
             }
         }
@@ -35,8 +37,25 @@ switch ($eventName) {
 
         if (count($host) < 5) {
             $_SESSION['city_key'] = '';
+            return;
         } else {
             $_SESSION['city_key'] = $host[0];
+        }
+        $multiSite = $modx->getService('multiSite', 'multiSite', MODX_CORE_PATH . 'components/multisite/model/', []);
+
+
+        $count = $modx->getCount('multiSiteCity', [
+            'city_key' => $_SESSION['city_key']
+        ]);
+
+        if (!$count) {
+            $_SESSION['city_key'] = '';
+//            $link = $modx->makeUrl($modx->getOption('site_start', [], 1));
+            $info = explode('.', $_SERVER['HTTP_HOST']);
+            unset($info[0]);
+            $link = 'http://' . join('.', $info);
+//            $modx->log(1, $link);
+            $modx->sendRedirect($link);
         }
         break;
     case 'OnDocFormPrerender':

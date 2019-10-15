@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="multisite" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="multisite"
+       version="1.1">
+
+    <object class="multiSiteItem" table="multisite_items" extends="xPDOSimpleObject">
+        <field key="res_id" dbtype="int" precision="100" phptype="integer" null="false" default="0"/>
+        <field key="city_key" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="content_key" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="key_text" dbtype="text" phptype="string" null="false"/>
+
+        <aggregate alias="Resource" class="modResource" local="res_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="multiSiteCity" table="multisite_city" extends="xPDOSimpleObject">
+        <field key="city_key" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="city_name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+    </object>
+
+</model>

@@ -1,0 +1,96 @@
+/* Grid */
+.multisite-multisite-row-disabled { font-style: italic; opacity: .6; color: #555; }
+.x-grid3-col-actions { padding: 3px 0 3px 5px; }
+
+/* Actions */
+.action-red { color: darkred !important; }
+.action-green { color: darkgreen !important; }
+.action-blue { color: cadetblue !important; }
+.action-yellow { color: goldenrod !important; }
+.action-gray { color: dimgray !important; }
+ul.multisite-row-actions { margin: 0; padding: 0; list-style: none; }
+ul.multisite-row-actions li { float: left; }
+ul.multisite-row-actions .multisite-btn { padding: 5px; margin-right: 2px; min-width: 26px; font-size: inherit; }
+
+/* Action menu */
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon { cursor: pointer; }
+a.x-menu-item .x-menu-item-text .icon { line-height: 16px; top: auto; }
+.x-menu-list .icon { min-width: 1em; text-align: center; }
+.x-menu-list-item:hover .icon { color: inherit !important; }
+ul.multisite-row-actions .actions-menu { width: 40px; }
+ul.multisite-row-actions .actions-menu:after { content: " \f107"; }
+
+/* Search field */
+.x-field-search-clear,
+.x-field-search-go { border-left: 1px solid #e4e4e4 !important; }
+.x-field-search-clear:hover,
+.x-field-search-go:hover { border-left-color: transparent !important; }
+.x-field-search-clear:before { content: '\f00d' !important; }
+.x-field-search-go { right: 31px !important; border-radius: 0 !important; }
+.x-field-search-go:before { content: '\f002' !important; }
+
+/* Buttons */
+.multisite-btn { display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+.multisite-btn:focus, .multisite-btn:active:focus, .multisite-btn.active:focus, .multisite-btn.focus, .multisite-btn:active.focus, .multisite-btn.active.focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px }
+.multisite-btn:hover, .multisite-btn:focus, .multisite-btn.focus { color: #333; text-decoration: none }
+.multisite-btn:active, .multisite-btn.active { outline: 0; background-image: none; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) }
+.multisite-btn.disabled, .multisite-btn[disabled], fieldset[disabled] .multisite-btn { cursor: not-allowed; opacity: .65; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none }
+a.multisite-btn.disabled, fieldset[disabled] a.multisite-btn { pointer-events: none }
+.multisite-btn-default { color: #333; background-color: #fff; border-color: #ccc }
+.multisite-btn-default:focus, .multisite-btn-default.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c }
+.multisite-btn-default:hover { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.multisite-btn-default:active, .multisite-btn-default.active, .open > .dropdown-toggle.multisite-btn-default { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.multisite-btn-default:active:hover, .multisite-btn-default.active:hover, .open > .dropdown-toggle.multisite-btn-default:hover, .multisite-btn-default:active:focus, .multisite-btn-default.active:focus, .open > .dropdown-toggle.multisite-btn-default:focus, .multisite-btn-default:active.focus, .multisite-btn-default.active.focus, .open > .dropdown-toggle.multisite-btn-default.focus { color: #333; background-color: #d4d4d4; border-color: #8c8c8c }
+.multisite-btn-default:active, .multisite-btn-default.active, .open > .dropdown-toggle.multisite-btn-default { background-image: none }
+.multisite-btn-default.disabled:hover, .multisite-btn-default[disabled]:hover, fieldset[disabled] .multisite-btn-default:hover, .multisite-btn-default.disabled:focus, .multisite-btn-default[disabled]:focus, fieldset[disabled] .multisite-btn-default:focus, .multisite-btn-default.disabled.focus, .multisite-btn-default[disabled].focus, fieldset[disabled] .multisite-btn-default.focus { background-color: #fff; border-color: #ccc }
+.multisite-btn-default .badge { color: #fff; background-color: #333 }
+.multisite-btn-primary { color: #fff; background-color: #337ab7; border-color: #2e6da4 }
+.multisite-btn-primary:focus, .multisite-btn-primary.focus { color: #fff; background-color: #286090; border-color: #122b40 }
+.multisite-btn-primary:hover { color: #fff; background-color: #286090; border-color: #204d74 }
+.multisite-btn-primary:active, .multisite-btn-primary.active, .open > .dropdown-toggle.multisite-btn-primary { color: #fff; background-color: #286090; border-color: #204d74 }
+.multisite-btn-primary:active:hover, .multisite-btn-primary.active:hover, .open > .dropdown-toggle.multisite-btn-primary:hover, .multisite-btn-primary:active:focus, .multisite-btn-primary.active:focus, .open > .dropdown-toggle.multisite-btn-primary:focus, .multisite-btn-primary:active.focus, .multisite-btn-primary.active.focus, .open > .dropdown-toggle.multisite-btn-primary.focus { color: #fff; background-color: #204d74; border-color: #122b40 }
+.multisite-btn-primary:active, .multisite-btn-primary.active, .open > .dropdown-toggle.multisite-btn-primary { background-image: none }
+.multisite-btn-primary.disabled:hover, .multisite-btn-primary[disabled]:hover, fieldset[disabled] .multisite-btn-primary:hover, .multisite-btn-primary.disabled:focus, .multisite-btn-primary[disabled]:focus, fieldset[disabled] .multisite-btn-primary:focus, .multisite-btn-primary.disabled.focus, .multisite-btn-primary[disabled].focus, fieldset[disabled] .multisite-btn-primary.focus { background-color: #337ab7; border-color: #2e6da4 }
+.multisite-btn-primary .badge { color: #337ab7; background-color: #fff }
+.multisite-btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c }
+.multisite-btn-success:focus, .multisite-btn-success.focus { color: #fff; background-color: #449d44; border-color: #255625 }
+.multisite-btn-success:hover { color: #fff; background-color: #449d44; border-color: #398439 }
+.multisite-btn-success:active, .multisite-btn-success.active, .open > .dropdown-toggle.multisite-btn-success { color: #fff; background-color: #449d44; border-color: #398439 }
+.multisite-btn-success:active:hover, .multisite-btn-success.active:hover, .open > .dropdown-toggle.multisite-btn-success:hover, .multisite-btn-success:active:focus, .multisite-btn-success.active:focus, .open > .dropdown-toggle.multisite-btn-success:focus, .multisite-btn-success:active.focus, .multisite-btn-success.active.focus, .open > .dropdown-toggle.multisite-btn-success.focus { color: #fff; background-color: #398439; border-color: #255625 }
+.multisite-btn-success:active, .multisite-btn-success.active, .open > .dropdown-toggle.multisite-btn-success { background-image: none }
+.multisite-btn-success.disabled:hover, .multisite-btn-success[disabled]:hover, fieldset[disabled] .multisite-btn-success:hover, .multisite-btn-success.disabled:focus, .multisite-btn-success[disabled]:focus, fieldset[disabled] .multisite-btn-success:focus, .multisite-btn-success.disabled.focus, .multisite-btn-success[disabled].focus, fieldset[disabled] .multisite-btn-success.focus { background-color: #5cb85c; border-color: #4cae4c }
+.multisite-btn-success .badge { color: #5cb85c; background-color: #fff }
+.multisite-btn-info { color: #fff; background-color: #5bc0de; border-color: #46b8da }
+.multisite-btn-info:focus, .multisite-btn-info.focus { color: #fff; background-color: #31b0d5; border-color: #1b6d85 }
+.multisite-btn-info:hover { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.multisite-btn-info:active, .multisite-btn-info.active, .open > .dropdown-toggle.multisite-btn-info { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.multisite-btn-info:active:hover, .multisite-btn-info.active:hover, .open > .dropdown-toggle.multisite-btn-info:hover, .multisite-btn-info:active:focus, .multisite-btn-info.active:focus, .open > .dropdown-toggle.multisite-btn-info:focus, .multisite-btn-info:active.focus, .multisite-btn-info.active.focus, .open > .dropdown-toggle.multisite-btn-info.focus { color: #fff; background-color: #269abc; border-color: #1b6d85 }
+.multisite-btn-info:active, .multisite-btn-info.active, .open > .dropdown-toggle.multisite-btn-info { background-image: none }
+.multisite-btn-info.disabled:hover, .multisite-btn-info[disabled]:hover, fieldset[disabled] .multisite-btn-info:hover, .multisite-btn-info.disabled:focus, .multisite-btn-info[disabled]:focus, fieldset[disabled] .multisite-btn-info:focus, .multisite-btn-info.disabled.focus, .multisite-btn-info[disabled].focus, fieldset[disabled] .multisite-btn-info.focus { background-color: #5bc0de; border-color: #46b8da }
+.multisite-btn-info .badge { color: #5bc0de; background-color: #fff }
+.multisite-btn-warning { color: #fff; background-color: #f0ad4e; border-color: #eea236 }
+.multisite-btn-warning:focus, .multisite-btn-warning.focus { color: #fff; background-color: #ec971f; border-color: #985f0d }
+.multisite-btn-warning:hover { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.multisite-btn-warning:active, .multisite-btn-warning.active, .open > .dropdown-toggle.multisite-btn-warning { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.multisite-btn-warning:active:hover, .multisite-btn-warning.active:hover, .open > .dropdown-toggle.multisite-btn-warning:hover, .multisite-btn-warning:active:focus, .multisite-btn-warning.active:focus, .open > .dropdown-toggle.multisite-btn-warning:focus, .multisite-btn-warning:active.focus, .multisite-btn-warning.active.focus, .open > .dropdown-toggle.multisite-btn-warning.focus { color: #fff; background-color: #d58512; border-color: #985f0d }
+.multisite-btn-warning:active, .multisite-btn-warning.active, .open > .dropdown-toggle.multisite-btn-warning { background-image: none }
+.multisite-btn-warning.disabled:hover, .multisite-btn-warning[disabled]:hover, fieldset[disabled] .multisite-btn-warning:hover, .multisite-btn-warning.disabled:focus, .multisite-btn-warning[disabled]:focus, fieldset[disabled] .multisite-btn-warning:focus, .multisite-btn-warning.disabled.focus, .multisite-btn-warning[disabled].focus, fieldset[disabled] .multisite-btn-warning.focus { background-color: #f0ad4e; border-color: #eea236 }
+.multisite-btn-warning .badge { color: #f0ad4e; background-color: #fff }
+.multisite-btn-danger { color: #fff; background-color: #d9534f; border-color: #d43f3a }
+.multisite-btn-danger:focus, .multisite-btn-danger.focus { color: #fff; background-color: #c9302c; border-color: #761c19 }
+.multisite-btn-danger:hover { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.multisite-btn-danger:active, .multisite-btn-danger.active, .open > .dropdown-toggle.multisite-btn-danger { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.multisite-btn-danger:active:hover, .multisite-btn-danger.active:hover, .open > .dropdown-toggle.multisite-btn-danger:hover, .multisite-btn-danger:active:focus, .multisite-btn-danger.active:focus, .open > .dropdown-toggle.multisite-btn-danger:focus, .multisite-btn-danger:active.focus, .multisite-btn-danger.active.focus, .open > .dropdown-toggle.multisite-btn-danger.focus { color: #fff; background-color: #ac2925; border-color: #761c19 }
+.multisite-btn-danger:active, .multisite-btn-danger.active, .open > .dropdown-toggle.multisite-btn-danger { background-image: none }
+.multisite-btn-danger.disabled:hover, .multisite-btn-danger[disabled]:hover, fieldset[disabled] .multisite-btn-danger:hover, .multisite-btn-danger.disabled:focus, .multisite-btn-danger[disabled]:focus, fieldset[disabled] .multisite-btn-danger:focus, .multisite-btn-danger.disabled.focus, .multisite-btn-danger[disabled].focus, fieldset[disabled] .multisite-btn-danger.focus { background-color: #d9534f; border-color: #d43f3a }
+.multisite-btn-danger .badge { color: #d9534f; background-color: #fff }
+.multisite-btn-link { color: #337ab7; font-weight: normal; border-radius: 0 }
+.multisite-btn-link, .multisite-btn-link:active, .multisite-btn-link.active, .multisite-btn-link[disabled], fieldset[disabled] .multisite-btn-link { background-color: transparent; -webkit-box-shadow: none; box-shadow: none }
+.multisite-btn-link, .multisite-btn-link:hover, .multisite-btn-link:focus, .multisite-btn-link:active { border-color: transparent }
+.multisite-btn-link:hover, .multisite-btn-link:focus { color: #23527c; text-decoration: underline; background-color: transparent }
+.multisite-btn-link[disabled]:hover, fieldset[disabled] .multisite-btn-link:hover, .multisite-btn-link[disabled]:focus, fieldset[disabled] .multisite-btn-link:focus { color: #777; text-decoration: none }
+.multisite-btn-lg { padding: 10px 16px; font-size: 18px; line-height: 1.3333333; border-radius: 6px }
+.multisite-btn-sm { padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.multisite-btn-xs { padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.multisite-btn-block { display: block; width: 100% }
+.multisite-btn-block + .multisite-btn-block { margin-top: 5px }

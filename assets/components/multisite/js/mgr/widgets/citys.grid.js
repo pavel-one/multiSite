@@ -72,13 +72,12 @@ Ext.extend(multiSite.grid.Citys, MODx.grid.Grid, {
     },
 
     updateItem: function (btn, e, row) {
-        if (typeof(row) != 'undefined') {
+        if (typeof (row) != 'undefined') {
             this.menu.record = row.data;
-        }
-        else if (!this.menu.record) {
+        } else if (!this.menu.record) {
             return false;
         }
-        var id = this.menu.record.id;
+        let id = this.menu.record.id;
 
         MODx.Ajax.request({
             url: this.config.url,
@@ -89,7 +88,7 @@ Ext.extend(multiSite.grid.Citys, MODx.grid.Grid, {
             listeners: {
                 success: {
                     fn: function (r) {
-                        var w = MODx.load({
+                        let w = MODx.load({
                             xtype: 'multiSite-city-window-update',
                             id: Ext.id(),
                             record: r,
@@ -111,7 +110,7 @@ Ext.extend(multiSite.grid.Citys, MODx.grid.Grid, {
     },
 
     removeItem: function () {
-        var ids = this._getSelectedIds();
+        let ids = this._getSelectedIds();
         if (!ids.length) {
             return false;
         }
@@ -193,16 +192,15 @@ Ext.extend(multiSite.grid.Citys, MODx.grid.Grid, {
     },
 
     onClick: function (e) {
-        var elem = e.getTarget();
+        let elem = e.getTarget();
         if (elem.nodeName == 'BUTTON') {
-            var row = this.getSelectionModel().getSelected();
-            if (typeof(row) != 'undefined') {
-                var action = elem.getAttribute('action');
+            let row = this.getSelectionModel().getSelected();
+            if (typeof (row) != 'undefined') {
+                let action = elem.getAttribute('action');
                 if (action == 'showMenu') {
-                    var ri = this.getStore().find('id', row.id);
+                    let ri = this.getStore().find('id', row.id);
                     return this._showMenu(this, ri, e);
-                }
-                else if (typeof this[action] === 'function') {
+                } else if (typeof this[action] === 'function') {
                     this.menu.record = row.data;
                     return this[action](this, e);
                 }
@@ -212,10 +210,10 @@ Ext.extend(multiSite.grid.Citys, MODx.grid.Grid, {
     },
 
     _getSelectedIds: function () {
-        var ids = [];
-        var selected = this.getSelectionModel().getSelections();
+        let ids = [],
+            selected = this.getSelectionModel().getSelections();
 
-        for (var i in selected) {
+        for (let i in selected) {
             if (!selected.hasOwnProperty(i)) {
                 continue;
             }

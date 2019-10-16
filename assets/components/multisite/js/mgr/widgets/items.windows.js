@@ -26,9 +26,8 @@ Ext.extend(multiSite.window.CreateItem, MODx.Window, {
             name: 'res_id',
             id: config.id + '-res_id',
         },{
-            xtype: 'textfield',
+            xtype: 'multiSite-combo-CitySelect',
             fieldLabel: 'Ключ города',
-            name: 'city_key',
             id: config.id + '-city_key',
             anchor: '99%',
             allowBlank: true,
@@ -88,9 +87,8 @@ Ext.extend(multiSite.window.UpdateItem, MODx.Window, {
             name: 'res_id',
             id: config.id + '-res_id',
         }, {
-            xtype: 'textfield',
+            xtype: 'multiSite-combo-CitySelect',
             fieldLabel: 'Ключ города',
-            name: 'city_key',
             id: config.id + '-city_key',
             anchor: '99%',
             allowBlank: true,

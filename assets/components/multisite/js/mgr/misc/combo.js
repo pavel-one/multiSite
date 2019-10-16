@@ -46,3 +46,40 @@ Ext.extend(multiSite.combo.Search, Ext.form.TwinTriggerField, {
 });
 Ext.reg('multisite-combo-search', multiSite.combo.Search);
 Ext.reg('multisite-field-search', multiSite.combo.Search);
+
+
+multiSite.combo.CitySelect = function (config) {
+    config = config || {};
+    Ext.applyIf(config, {
+        name: 'cat_id',
+        fieldLabel: config.label || 'city_key',
+        hiddenName: config.hiddenName || 'city_key',
+        displayField: config.display || 'city_name',
+        valueField: config.value || 'city_key',
+        anchor: '99%',
+        fields: ['city_key', 'city_name'],
+        pageSize: 999999,
+        typeAhead: false,
+        editable: true,
+        allowBlank: true,
+        url: multiSite.config['connector_url'],
+        baseParams: {
+            action: 'mgr/city/getlist',
+            combo: true,
+        },
+        tpl: new Ext.XTemplate('\
+            <tpl for=".">\
+                <div class="x-combo-list-item">\
+                    <span>\
+                        <b>{city_name}</b>\
+                        <small>({city_key})</small>\
+                    </span>\
+                </div>\
+            </tpl>',
+            {compiled: true}
+        ),
+    });
+    multiSite.combo.CitySelect.superclass.constructor.call(this, config);
+};
+Ext.extend(multiSite.combo.CitySelect, MODx.combo.ComboBox);
+Ext.reg('multiSite-combo-CitySelect', multiSite.combo.CitySelect);

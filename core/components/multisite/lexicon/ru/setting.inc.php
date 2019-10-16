@@ -2,5 +2,5 @@
 
 $_lang['area_multisite_main'] = 'Основные';
 
-$_lang['setting_multisite_some_setting'] = 'Какая-то настройка';
-$_lang['setting_multisite_some_setting_desc'] = 'Это описание для какой-то настройки';
+$_lang['setting_multisite_url'] = 'Базовый урл';
+$_lang['setting_multisite_url_desc'] = 'Домен вашего сайта с http/https без поддоменов';

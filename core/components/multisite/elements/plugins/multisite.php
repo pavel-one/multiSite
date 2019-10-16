@@ -39,8 +39,10 @@ switch ($eventName) {
             $_SESSION['city_key'] = '';
             return;
         } else {
+            unset($_SESSION['city_key']);
             $_SESSION['city_key'] = $host[0];
         }
+        /** @var multiSite $multiSite */
         $multiSite = $modx->getService('multiSite', 'multiSite', MODX_CORE_PATH . 'components/multisite/model/', []);
 
 
@@ -50,11 +52,9 @@ switch ($eventName) {
 
         if (!$count) {
             $_SESSION['city_key'] = '';
-//            $link = $modx->makeUrl($modx->getOption('site_start', [], 1));
             $info = explode('.', $_SERVER['HTTP_HOST']);
             unset($info[0]);
-            $link = 'http://' . join('.', $info);
-//            $modx->log(1, $link);
+            $link = $_SERVER['REQUEST_SCHEME'] . '://' . join('.', $info) . '/' . $_SERVER['REQUEST_URI'];
             $modx->sendRedirect($link);
         }
         break;

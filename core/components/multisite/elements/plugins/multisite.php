@@ -35,7 +35,7 @@ switch ($eventName) {
 
         $host = explode('.', $_SERVER['HTTP_HOST']);
 
-        if (count($host) < 5) {
+        if (count($host) < $modx->getOption('multisite_depth_url', [], 4)) {
             $_SESSION['city_key'] = '';
             return;
         } else {

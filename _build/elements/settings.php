@@ -11,4 +11,9 @@ return [
         'value' => 4,
         'area' => 'multisite_main',
     ],
+    'context' => [
+        'xtype' => 'textfield',
+        'value' => 'web',
+        'area' => 'multisite_main',
+    ],
 ];

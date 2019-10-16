@@ -2,6 +2,9 @@
 
 $_lang['area_multisite_main'] = 'Основные';
 
+$_lang['setting_multisite_context'] = 'Контекст';
+$_lang['setting_multisite_context_desc'] = 'Контекст по умолчанию для работы плагина';
+
 $_lang['setting_multisite_url'] = 'Базовый урл';
 $_lang['setting_multisite_url_desc'] = 'Домен вашего сайта с http/https без поддоменов';
 

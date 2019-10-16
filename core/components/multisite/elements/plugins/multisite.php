@@ -31,20 +31,20 @@ switch ($eventName) {
 
         break;
     case 'OnHandleRequest':
-        $request = &$_REQUEST;
+        $context = $modx->context->key;
+        if ($context != $modx->getOption('multisite_context', [], 'web')) break;
 
+        $request = &$_REQUEST;
         $host = explode('.', $_SERVER['HTTP_HOST']);
 
         if (count($host) < $modx->getOption('multisite_depth_url', [], 4)) {
             $_SESSION['city_key'] = '';
-            return;
+            break;
         } else {
-            unset($_SESSION['city_key']);
             $_SESSION['city_key'] = $host[0];
         }
         /** @var multiSite $multiSite */
         $multiSite = $modx->getService('multiSite', 'multiSite', MODX_CORE_PATH . 'components/multisite/model/', []);
-
 
         $count = $modx->getCount('multiSiteCity', [
             'city_key' => $_SESSION['city_key']
@@ -57,11 +57,11 @@ switch ($eventName) {
             $link = $_SERVER['REQUEST_SCHEME'] . '://' . join('.', $info) . '/' . $_SERVER['REQUEST_URI'];
             $modx->sendRedirect($link);
         }
+
         break;
     case 'OnDocFormPrerender':
         /** @var multiSite $multiSite */
         $multiSite = $modx->getService('multiSite', 'multiSite', MODX_CORE_PATH . 'components/multisite/model/', []);
-
 
         $modx->controller->addLastJavascript(MODX_ASSETS_URL . 'components/multisite/js/mgr/multisite.js');
         $modx->controller->addLastJavascript(MODX_ASSETS_URL . 'components/multisite/js/mgr/misc/combo.js');

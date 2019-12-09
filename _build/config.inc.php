@@ -24,7 +24,7 @@ return [
         'policies' => true,
         'policy_templates' => true,
         'resources' => false,
-        'settings' => false,
+        'settings' => true, //TODO: Временно
         'snippets' => true,
         'templates' => false,
         'widgets' => false,

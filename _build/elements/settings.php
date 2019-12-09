@@ -3,7 +3,7 @@
 return [
     'url' => [
         'xtype' => 'textfield',
-        'value' => 'http://site.ru/',
+        'value' => MODX_SITE_URL,
         'area' => 'multisite_main',
     ],
     'depth_url' => [
@@ -14,6 +14,16 @@ return [
     'context' => [
         'xtype' => 'textfield',
         'value' => 'web',
+        'area' => 'multisite_main',
+    ],
+    'pattern' => [
+        'xtype' => 'textfield',
+        'value' => '/\[\w+\]/',
+        'area' => 'multisite_main',
+    ],
+    'replace_empty' => [
+        'xtype' => 'combo-boolean',
+        'value' => true,
         'area' => 'multisite_main',
     ],
 ];

@@ -1,5 +1,11 @@
 Changelog for multiSite.
 
-1.0.0-pl
+1.0.1-beta
 ==============
-- Чейнджлог смотрите на гитхабе
+- Fix url option
+- Add replace option
+- Add pattern option
+
+1.0.0-beta
+==============
+- init

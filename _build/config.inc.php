@@ -11,8 +11,8 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'multiSite',
     'name_lower' => 'multisite',
-    'version' => '1.0.0',
-    'release' => 'pl',
+    'version' => '1.0.1',
+    'release' => 'beta',
     // Install package to site right after build
     'install' => true,
     // Which elements should be updated on package upgrade
@@ -24,7 +24,7 @@ return [
         'policies' => true,
         'policy_templates' => true,
         'resources' => false,
-        'settings' => true, //TODO: Временно
+        'settings' => false,
         'snippets' => true,
         'templates' => false,
         'widgets' => false,

@@ -14,7 +14,7 @@ Ext.override(MODx.panel.Resource, {
                         title: 'Мультисайтовость',
                         layout: 'anchor',
                         items: [{
-                            html: 'Добавьте ключ и получите профит',
+                            html: 'Для разных городов но одинаковых ключей, поле "ключ" должно быть одинаково',
                             cls: 'panel-desc',
                         }, {
                             xtype: 'multisite-grid-items',

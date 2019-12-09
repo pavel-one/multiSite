@@ -23,6 +23,7 @@ switch ($eventName) {
                     'content_key' => $tag
                 ]);
                 if (!$find) {
+                    $output = str_replace("[$tag]", '', $output);
                     continue;
                 }
                 $output = str_replace("[$tag]", $find->get('key_text'), $output);
